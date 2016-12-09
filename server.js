@@ -2,11 +2,15 @@
 var express = require('express');        // call express
 var app = express();	//define App using express
 
+var db  = require('./app/model/db'); //define db
+
 var port = 8080;  // set port
 
 // ROUTES FOR OUR API
 // ===============================================================================
 var router = express.Router();
+
+
 
 // Defult testing route (accessed by GET http://localhost:8080/)
 app.get('/', function(req, res) {
