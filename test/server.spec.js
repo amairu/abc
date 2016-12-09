@@ -1,17 +1,25 @@
 var request = require("request");
+var server = 'http://localhost:8080/api/index';
 
 describe('ABC routing', function () {
-	var server = 'http://localhost:8080/api/index';
+	
 
-	it("GET /api/index returns status code 200", function() {
-		request.get(server, function(error, response, body) {
-			expect(response.statusCode).toBe(200);
+	describe("GET /api/index", function() {
+		it("returns status code 200", function(done) {
+			request.get(server, function(error, response, body) {
+				expect(response.statusCode).toBe(200);
+				done();
+			});
 		});
 	});
-
-	it("POST /api/index returns status code 200", function() {
-		request.get(server, function(error, response, body) {
-			expect(response.statusCode).toBe(200);
+	
+	describe("POST /api/index", function() {
+		it("returns status code 200", function(done) {
+			request.get(server, function(error, response, body) {
+				expect(response.statusCode).toBe(200);
+				done();
+			});
 		});
 	});
+	
 });
