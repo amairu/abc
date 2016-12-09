@@ -41,3 +41,5 @@ app.use('/api', router);
 // ===============================================================================
 app.listen(port);
 console.log('Start on port ' + port);
+
+module.exports = app;
