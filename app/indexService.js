@@ -27,6 +27,8 @@ var quaryIndexValue = function (db, index, callback) {
 }
 
 module.exports = function () {
+	//define public method
+	// ===============================================================================
 	var indexService = {
 		scrapeIndexValue: function (db, callback) {
 			console.log('Parsing index value.......');
